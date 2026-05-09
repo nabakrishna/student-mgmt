@@ -95,13 +95,21 @@ export default function AdminDashboard() {
   // Run whenever selected student changes. The setState calls here are inside
   // an async callback (loadGrades) or an early-return guard, never synchronously
   // in the effect body — so there is no cascading-render problem.
+  // useEffect(() => {
+  //   if (!selected) return;//{
+  //   //   setGrades([]);   // ← this early setGrades is fine: it's a guard, not async
+  //   //   return;
+  //   // }
+  //   loadGrades(selected.id);
+  // }, [selected, loadGrades]);
   useEffect(() => {
-    if (!selected) {
-      setGrades([]);   // ← this early setGrades is fine: it's a guard, not async
-      return;
-    }
-    loadGrades(selected.id);
-  }, [selected, loadGrades]);
+    if (!selected) return;
+    (async () => {
+      const res = await fetch(`/api/grades/${selected.id}`);
+      const data = await res.json();
+      setGrades(Array.isArray(data) ? data : []);
+    })();
+  }, [selected]);
 
   // ── Handlers ───────────────────────────────────────────────────────
   const logout = async () => {
