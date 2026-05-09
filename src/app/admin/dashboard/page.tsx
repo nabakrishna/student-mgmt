@@ -158,24 +158,6 @@ export default function AdminDashboard() {
     fetchStudents();
   };
 
-  // const handleDeleteGrade = async (gradeId: number) => {
-  //   if (!selected) return;
-  //   if (!confirm("Delete this grade entry?")) return;
-  //   setError(""); setSuccess("");
-  //   const res = await fetch(`/api/grades/${selected.id}`, {
-  //     method: "DELETE",
-  //     headers: { "Content-Type": "application/json" },
-  //     body: JSON.stringify({ gradeId }),
-  //   });
-  //   if (!res.ok) {
-  //     const data = await res.json();
-  //     setError(data.error ?? "Failed to delete grade.");
-  //     return;
-  //   }
-  //   setSuccess("Grade deleted.");
-  //   setEditingGrade(null);
-  //   loadGrades(selected.id);
-  // };
   const handleDeleteGrade = async (gradeId: number) => {
     if (!selected) return;
     if (!confirm("Delete this grade entry?")) return;
