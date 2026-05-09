@@ -43,8 +43,13 @@ student-mgmt/
 
 
 
-### for tun first
+### for run
 npm run db:setup
+npm run dev
+
+ or
+
+sqlite3 database.sqlite ".read 'C:/Users/N. K. Hazarika/Desktop/project/student-mgmt/src/lib/setup.sql'"
 npm run dev
 
 
