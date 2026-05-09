@@ -321,13 +321,13 @@ export default function AdminDashboard() {
               <div className="flex gap-3 mb-4">
                 <input
                   placeholder="Filter by class"
-                  className="border rounded-lg px-3 py-1.5 text-sm flex-1 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                  className="border rounded-lg px-3 py-1.5 text-sm flex-1 focus:outline-none focus:ring-2 focus:ring-blue-400 text-slate-900"
                   value={filterClass}
                   onChange={(e) => setFilterClass(e.target.value)}
                 />
                 <input
                   placeholder="Filter by section"
-                  className="border rounded-lg px-3 py-1.5 text-sm flex-1 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                  className="border rounded-lg px-3 py-1.5 text-sm flex-1 focus:outline-none focus:ring-2 focus:ring-blue-400 text-slate-900"
                   value={filterSection}
                   onChange={(e) => setFilterSection(e.target.value)}
                 />
@@ -389,11 +389,11 @@ export default function AdminDashboard() {
                 <div className="space-y-2">
                   {(["name", "class", "section", "address", "dob", "phone", "email"] as (keyof Student)[]).map((field) => (
                     <div key={String(field)}>
-                      <label className="block text-xs text-slate-400 capitalize mb-0.5">
+                      <label className="block text-xs text-slate-600 capitalize mb-0.5">
                         {String(field)}
                       </label>
                       <input
-                        className="w-full border rounded-lg px-3 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
+                        className="w-full border rounded-lg px-3 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400 text-slate-500"
                         value={getField(selected, field)}
                         onChange={(e) => setSelected({ ...selected, [field]: e.target.value })}
                       />
