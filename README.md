@@ -44,6 +44,7 @@ DELETE
 │       └── auth.ts                        ← JWT helpers
 ├── database.sqlite                        ← auto-created by setup script
 ├── .env.local
+├── .gitattributes
 ├── .gitignore
 ├── eslint.config.mjs
 ├── next-env.d.ts
