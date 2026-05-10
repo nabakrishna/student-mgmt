@@ -4,8 +4,8 @@ also there is student dashborad and admin dashboard. for student and admin bith 
 system respectively . also student can chnage theri user name and password(only if their name and registration no in the database).
 
 
-## project structure
-
+# project structure
+```
 student-mgmt/
 ├── src/
 │   ├── app/
@@ -28,8 +28,11 @@ student-mgmt/
 │   │       │   └── logout/route.ts
 │   │       ├── students/
 │   │       │   ├── route.ts               ← GET all, POST new
-│   │       │   └── [id]/
-│   │       │       └── route.ts           ← GET one, PUT, DELETE
+│   │       │   ├── [id]/
+│   │       │   │   └── route.ts           ← GET one, PUT, 
+│   │       │   └── me
+│   │       │       └── route.ts
+DELETE
 │   │       └── grades/
 │   │           ├── route.ts               ← POST new grade
 │   │           └── [studentId]/
@@ -40,22 +43,19 @@ student-mgmt/
 │       └── auth.ts                        ← JWT helpers
 ├── database.sqlite                        ← auto-created by setup script
 └── .env.local
-
+```
 
 
 ### for run
+```
 npm run db:setup
+and
 npm run dev
-
- or
-
-sqlite3 database.sqlite ".read 'C:/Users/N. K. Hazarika/Desktop/project/student-mgmt/src/lib/setup.sql'"
+```
+### or
+```
+sqlite3 database.sqlite ".read 'path of the setup.sql file '"
+and
 npm run dev
+```
 
-
-#### needs
-the database management is not that good
-inject sql 
-
-
-have to write sql script  and connect with ts and tsx 
