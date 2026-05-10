@@ -7,6 +7,9 @@ system respectively . also student can chnage theri user name and password(only 
 # project structure
 ```
 student-mgmt/
+├── .next                                   ← .next js modules
+├── node-modules                            ← node modules
+├── public/...                              ← 
 ├── src/
 │   ├── app/
 │   │   ├── layout.tsx
@@ -39,14 +42,50 @@ DELETE
 │   │               └── route.ts           ← GET by student, PUT
 │   └── lib/
 │       ├── db.ts                          ← DB connection singleton
+│       ├── setup.sql                      ← DB script
 │       ├── db-setup.ts                    ← Schema + seed script
 │       └── auth.ts                        ← JWT helpers
 ├── database.sqlite                        ← auto-created by setup script
-└── .env.local
+├── .env.local
+├── .gitignore
+├── eslint.config.mjs
+├── next-env.d.ts
+├── next.config.mjs
+├── package-lock.json
+├── package.json
+├── postcss.config.mjs
+├── README.md
+└── tsconfig.json
+```
+# for setup instruction
+
+### 1. Scaffold a new Next.js project
+```
+npx create-next-app@latest student-mgmt --typescript --tailwind --eslint --app --src-dir --import-alias "@/*"
+cd student-mgmt
+```
+### 2. Install SQLite drivers
+```
+npm install sqlite sqlite3
+```
+### 3. Install auth dependencies (JWT + password hashing)
+```
+npm install jsonwebtoken bcryptjs
+npm install --save-dev @types/jsonwebtoken @types/bcryptjs @types/node
+```
+### 4. Install tsx to run the setup script directly
+```
+npm install --save-dev tsx
 ```
 
+## add this script to package.json
+```
+"scripts": {
+  "db:setup": "tsx src/lib/db-setup.ts"
+}
+```
 
-### for run
+## for run
 ```
 npm run db:setup
 and
