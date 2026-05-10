@@ -59,21 +59,21 @@ DELETE
 ```
 # for setup instruction
 
-### 1. Scaffold a new Next.js project
+#### 1. Scaffold a new Next.js project
 ```
 npx create-next-app@latest student-mgmt --typescript --tailwind --eslint --app --src-dir --import-alias "@/*"
 cd student-mgmt
 ```
-### 2. Install SQLite drivers
+#### 2. Install SQLite drivers
 ```
 npm install sqlite sqlite3
 ```
-### 3. Install auth dependencies (JWT + password hashing)
+#### 3. Install auth dependencies (JWT + password hashing)
 ```
 npm install jsonwebtoken bcryptjs
 npm install --save-dev @types/jsonwebtoken @types/bcryptjs @types/node
 ```
-### 4. Install tsx to run the setup script directly
+#### 4. Install tsx to run the setup script directly
 ```
 npm install --save-dev tsx
 ```
