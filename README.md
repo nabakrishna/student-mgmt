@@ -1,7 +1,7 @@
 # about
-this student management system has minimal implemenatation .ts and .tsx with a complete database system with all operation
-also there is student dashborad and admin dashboard. for student and admin bith have to sign in to get their profile and see  the admin 
-system respectively . also student can chnage theri user name and password(only if their name and registration no in the database).
+this student management system has minimal implemenatation of .ts , .tsx and sql with a complete database system with all operation
+also there is student dashborad and admin dashboard, for student and admin both have to sign in to get their profile and see  the admin 
+system respectively . also student can chnage their user name and password(only if their name and registration no in the database).
 
 
 # project structure
