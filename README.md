@@ -1,8 +1,5 @@
 # about
-this student management system has minimal implemenatation of .ts , .tsx and sql with a complete database system with all operation
-also there is student dashborad and admin dashboard, for student and admin both have to sign in to get their profile and see  the admin 
-system respectively . also student can chnage their user name and password(only if their name and registration no in the database).
-
+In this student management system, the front end is craeted using typescript/tsx along with the simple sql database and also the database in the .ts script. This management system has separate dashboards for both students and administrators, and each login must be authenticated to view any profile or management interface. In addition to providing all CRUD actions, there is an added security feature whereby students have to validate their name and registration number to update their password information.
 
 # project structure
 ```
@@ -97,4 +94,15 @@ sqlite3 database.sqlite ".read 'path of the setup.sql file '"
 and
 npm run dev
 ```
-
+## next thing to do -
+1. No middleware route protection — if someone types /admin/dashboard directly in the browser without logging in, there's nothing stopping them. You only check auth inside the page after it loads, not before.
+2. Admin can access student routes and vice versa — a logged-in student could manually visit /admin/dashboard and see the page flash before the client-side redirect kicks in.
+3. Password hash exposed to client — your GET /api/students returns password_hash to the browser. Even hashed, this should never leave the server.
+4. No rate limiting on login 
+5. Filter doesn't reset — if you filter by class "12" then clear the input, the list doesn't refresh until you click Filter again.
+6. No input length limits — the register and add student forms accept unlimited length input, which could cause DB issues
+7. Marks validation only on DB side — the frontend lets you type -5 or 150 in the marks field with no client-side check.
+8. Grade edit doesn't validate empty subject — you can save a grade with a blank subject name.
+9. Selected student panel doesn't update after editing — after saving student changes, the left list refreshes but the right panel still shows old data.
+10. No 404 page 
+11. Register page doesn't validate password strength — accepts single character passwords.
