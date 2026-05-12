@@ -9,6 +9,31 @@ https://github.com/nabakrishnaaa/student-mgmt<br>
 The website live on-<br>
 https://student-mgmt-vqo1.onrender.com
 
+## Quick Start Guide
+1.Account Access
+
+For Admins: Log in using the default credentials:<br>
+Username: ```admin```<br>
+Password: ```admin123```
+
+For Students:<br>
+If your name is not in the system, please contact the administrator to have your details added to the database.(just log in as admin and insert ur data)
+
+If your name is already registered, proceed to the Sign Up page to create your personal account credentials.
+
+2.Registration & Login
+
+Sign Up: Enter your registered details and set a secure password.<br>
+Login: Once registered, use your new credentials to access your dashboard.
+
+3.Navigation
+
+Students: View your profile, check academic records, and update personal information.
+
+Admins: Manage student lists, authorize new registrations, and update the database.
+
+Note: nothing
+
 # project structure
 ```
 student-mgmt/
