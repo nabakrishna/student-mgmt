@@ -37,11 +37,14 @@ DELETE
 │   │           ├── route.ts               ← POST new grade
 │   │           └── [studentId]/
 │   │               └── route.ts           ← GET by student, PUT
-│   └── lib/
-│       ├── db.ts                          ← DB connection singleton
-│       ├── setup.sql                      ← DB script
-│       ├── db-setup.ts                    ← Schema + seed script
-│       └── auth.ts                        ← JWT helpers
+│   ├── lib/
+│   │   ├── auth-edge.ts
+│   │   ├── rate-limit.ts
+│   │   ├── db.ts                          ← DB connection singleton
+│   │   ├── setup.sql                      ← DB script
+│   │   ├── db-setup.ts                    ← Schema + seed script
+│   │   └── auth.ts                        ← JWT helpers
+│   └── middleware.ts                      ←   
 ├── database.sqlite                        ← auto-created by setup script
 ├── .env.local
 ├── .gitattributes
