@@ -3,11 +3,11 @@ In this student management system, the front end is craeted using typescript/tsx
 
 ## Deplyoment
 
-i deployed in render by changing some files and code
-for see the render deployed repository follow the link-
-(https://github.com/nabakrishnaaa/student-mgmt)
-The website live on-
-(https://student-mgmt-vqo1.onrender.com)
+I deployed in render by changing some files and code.<br>
+for see the render deployed repository follow the link-<br>
+https://github.com/nabakrishnaaa/student-mgmt<br>
+The website live on-<br>
+https://student-mgmt-vqo1.onrender.com
 
 # project structure
 ```
