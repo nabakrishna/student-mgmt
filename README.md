@@ -1,6 +1,14 @@
 # about
 In this student management system, the front end is craeted using typescript/tsx along with the simple sql database and also the database in the .ts script. This management system has separate dashboards for both students and administrators, and each login must be authenticated to view any profile or management interface. In addition to providing all CRUD actions, there is an added security feature whereby students have to validate their name and registration number to update their password information.
 
+## Deplyoment
+
+i deployed in render by changing some files and code
+for see the render deployed repository follow the link-
+(https://github.com/nabakrishnaaa/student-mgmt)
+The website live on-
+(https://student-mgmt-vqo1.onrender.com)
+
 # project structure
 ```
 student-mgmt/
