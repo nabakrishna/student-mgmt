@@ -106,7 +106,7 @@ sqlite3 database.sqlite ".read 'path of the setup.sql file '"
 and
 npm run dev
 ```
-## next thing to do -
+## next thing to do -(1 to 4 down)
 1. No middleware route protection — if someone types /admin/dashboard directly in the browser without logging in, there's nothing stopping them. You only check auth inside the page after it loads, not before.
 2. Admin can access student routes and vice versa — a logged-in student could manually visit /admin/dashboard and see the page flash before the client-side redirect kicks in.
 3. Password hash exposed to client — your GET /api/students returns password_hash to the browser. Even hashed, this should never leave the server.
