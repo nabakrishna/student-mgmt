@@ -34,6 +34,10 @@ Admins: Manage student lists, authorize new registrations, and update the databa
 
 **Note**: nothing
 
+## Issue
+
+The main issue is that SQLite stores data in a local file, which Render deletes each time it restarts or redeploys because there is no free persistent disk storage. Right now, the build command re-runs the database script, which wipes any existing data and starts over. To fix this and ensure student records are saved permanently, the project needs to switch from SQLite to PostgreSQL. PostgreSQL offers a persistent, external database service.
+
 # project structure
 ```
 student-mgmt/
